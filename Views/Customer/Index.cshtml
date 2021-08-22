@@ -1,8 +1,16 @@
 ﻿@model IEnumerable<Project_Test.Models.Customers>
 
-<h4 class="text-success">CustomerDB</h4><hr />
+    <div class="col-12">
+        <h4 class="text-success">CustomerDB</h4>
+    </div>
 
-<table class="table table-bordered table-striped">
+    <div class="col-12 text-right">
+        <a asp-controller="Customer" asp-action="Create" class="btn btn-primary">Create Name</a>
+    </div>
+
+<hr />
+
+<table class="table table-bordered table-striped" style="width:100%">
    <thead>
        <tr>
            <th>Id</th>

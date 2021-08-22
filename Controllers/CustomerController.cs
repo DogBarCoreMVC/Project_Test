@@ -22,5 +22,21 @@ namespace Project_Test.Controllers
             IEnumerable<Customers> Obj = _db.customersTbl;
             return View(Obj);
         }
+
+        //GET
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Customers Obj)
+        {
+            _db.customersTbl.Add(Obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
