@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Project_Test.Models.Customers>
+
+<h4 class="text-success">CustomerDB</h4><hr />
+
+<table class="table table-bordered table-striped">
+   <thead>
+       <tr>
+           <th>Id</th>
+           <th>Name</th>
+       </tr>
+   </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td width="30%">@Html.DisplayFor(ModelItem => item.Id)</td>
+            <td width="50%">@Html.DisplayFor(ModelItem => item.Name)</td>
+        </tr>
+        }
+    </tbody>
+</table>
